@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 01:39 PM
+-- Generation Time: May 27, 2023 at 01:08 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -87,23 +87,23 @@ INSERT INTO `kategori` (`nama_kategori`) VALUES
 --
 
 CREATE TABLE `produk_donat` (
-  `id_produk` int(3) NOT NULL,
-  `gambar` varchar(30) NOT NULL,
+  `id` int(3) NOT NULL,
   `nama_donat` varchar(30) NOT NULL,
   `nama_kategori` varchar(40) NOT NULL,
   `harga` decimal(10,2) NOT NULL,
-  `status` varchar(30) NOT NULL
+  `status` varchar(30) NOT NULL,
+  `gambar` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `produk_donat`
 --
 
-INSERT INTO `produk_donat` (`id_produk`, `gambar`, `nama_donat`, `nama_kategori`, `harga`, `status`) VALUES
-(1, 'caviar_chocolate.png', 'Caviar Chocolate', 'Donat Ukuran Regular', '9500.00', 'tersedia 5 buah'),
-(2, 'why-nut.png', 'Why Nut', 'Donat Ukuran Regular', '10000.00', 'tersedia 8 buah'),
-(3, 'avocado_delight.png', 'Avocado Delight', 'Donat Ukuran Mini', '6000.00', 'belum tersedia'),
-(4, 'dont_cry.png', 'Dont Cry', 'Donat Ukuran Regular', '9500.00', 'tersedia 10 buah');
+INSERT INTO `produk_donat` (`id`, `nama_donat`, `nama_kategori`, `harga`, `status`, `gambar`) VALUES
+(1, 'Caviar Chocolate', 'Donat Ukuran Regular', '9500.00', 'tersedia 5 buah', 'caviar_chocolate.png'),
+(2, 'Why Nut', 'Donat Ukuran Regular', '10000.00', 'tersedia 8 buah', 'why_nut.png'),
+(3, 'Avocado Delight', 'Donat Ukuran Mini', '6000.00', 'belum tersedia', 'avocado_delight.png'),
+(4, 'Dont Cry', 'Donat Ukuran Regular', '9500.00', 'tersedia 10 buah', 'dont_cry.png');
 
 --
 -- Indexes for dumped tables
@@ -131,7 +131,7 @@ ALTER TABLE `kategori`
 -- Indexes for table `produk_donat`
 --
 ALTER TABLE `produk_donat`
-  ADD PRIMARY KEY (`id_produk`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -141,7 +141,7 @@ ALTER TABLE `produk_donat`
 -- AUTO_INCREMENT for table `produk_donat`
 --
 ALTER TABLE `produk_donat`
-  MODIFY `id_produk` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

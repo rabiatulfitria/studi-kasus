@@ -135,12 +135,12 @@
               <table class="table table-striped table-advance table-hover">
                 <tbody>
                   <tr>
-                    <th><i></i> No</th>
+                    <th><i></i> ID</th>
                     <th><i></i> Nama Produk</th>
-                    <th><i></i> Gambar Produk</th>
                     <th><i></i> Kategori</th>
                     <th><i></i> Harga</th>
                     <th><i></i> Stok Donat</th>
+                    <th><i></i> Gambar Produk</th>
                     <th><i></i> Action</th>
                   </tr>
                   <?php
@@ -152,16 +152,17 @@
                       $no++;
                   ?>
                   <tr>
-                    <td><?php echo $no; ?></td>
-                    <td><?php echo $data["nama_donat"]; ?></td>
-                    <td><img width="150px" src="../images/<?php echo $data["gambar"]; ?>"></td>
-                    <td><?php echo $data["nama_kategori"]; ?></td>
-                    <td>Rp <?php echo $data["harga"]; ?></td>
-                    <td><?php echo $data["status"]; ?></td>
+                    <td><?php echo $data['id']; ?></td>
+                    <td><?php echo $data['nama_donat']; ?></td>
+                    <td><?php echo $data['nama_kategori']; ?></td>
+                    <td>Rp <?php echo $data['harga']; ?></td>
+                    <td><?php echo $data['status']; ?></td>
+                    <td><img width="150px" src="../images/<?php echo $data['gambar']; ?>"></td>
+
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-warning" href="data_penjual_edit.php?id=<?php echo $data["id_produk"]; ?>"><i class="icon_pencil_alt"></i>Edit</a>
-                        <a class="btn btn-danger" href="data_penjual_hapus_db.php?id=<?php echo $data["id_produk"]; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><i class="icon_trash_alt"></i>Del</a>
+                        <a class="btn btn-warning" href="data_penjual_edit.php?id=<?php echo $data['id']; ?>"><i class="icon_pencil_alt"></i>Edit</a>
+                        <a class="btn btn-danger" href="data_penjual_hapus_db.php?id=<?php echo $data['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><i class="icon_trash_alt"></i>Del</a>
                       </div>
                     </td>
                   </tr>

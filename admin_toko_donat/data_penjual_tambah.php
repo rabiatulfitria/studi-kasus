@@ -138,10 +138,6 @@
               <div class="panel-body">
                 <form role="form" action="data_penjual_tambah_db.php" method="POST" enctype="multipart/form-data">
                   <div class="form-group">
-                    <label>Unggah Foto</label>
-                    <input type="file" name="foto_produk" placeholder="Foto Produk">              
-                  </div>
-                  <div class="form-group">
                     <label>Nama Produk</label>
                     <input type="text" name="nama_donat" class="form-control" id="exampleInputEmail1" placeholder="Nama Produk">
                   </div>
@@ -159,12 +155,17 @@
                       <option value="6000">6000</option>
                       <option value="9500">9500</option>
                       <option value="10000">10000</option>
-                    </select>  
+                    </select>
+                  </div>    
                   <div class="form-group">
                     <label>Stok Donat</label>
-                    <input type="text" name="status" class="form-control" id="exampleInputPassword1" placeholder="Stok Donat">
-                  </div>  
+                    <input type="text" name="status" class="form-control" placeholder="Stok Donat">
                   </div>
+                  <div class="form-group">
+                    <label>Unggah Foto</label>
+                    <input type="file" name="gambar" placeholder="Foto Produk">              
+                  </div>  
+                </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 

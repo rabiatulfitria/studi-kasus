@@ -117,11 +117,11 @@
 				?>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/<?php echo $data["gambar"]; ?>);">
+						<div class="product-grid" style="background-image:url(images/<?php echo $data['gambar']; ?>);">
 						</div>
 						<div class="desc">
-							<h3><a href="index.php"><?php echo $data["nama_donat"]; ?></a></h3>
-							<span class="price">Rp<?php echo $data["jumlah"]; ?></span>
+							<h3><a href="index.php"><?php echo $data['nama_donat']; ?></a></h3>
+							<span class="price">Rp<?php echo $data['harga']; ?></span>
 						</div>
 					</div>
 				</div>
@@ -179,7 +179,7 @@
 					<div class="fh5co-staff">
 						<img src="images/robiatul.jpg" width="350px" height="200px">
 						<h3>Rabiatul Fitria SP</h3>
-						<strong class="role">Universitas Trunojoyo Madura</strong>
+						<strong class="role">Owner Toko Donat</strong>
 					</div>
 				</div>
 			</div>

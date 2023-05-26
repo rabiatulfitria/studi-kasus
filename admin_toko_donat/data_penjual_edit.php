@@ -136,39 +136,40 @@
               <header class="panel-heading">
                 Edit Data Produk
               </header>
-              <div class="panel-body">
-                <form role="form" action="data_penjual_edit_db.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
-                <?php 
+              <?php 
                 require("../koneksi.php");
-
-                $query = mysqli_query($db_con,"SELECT * FROM produk_donat");
+                $id = $_GET['id'];
+                $query = mysqli_query($db_con,"SELECT * FROM produk_donat WHERE id='$id'");
                 while ($data = mysqli_fetch_array($query)) {
-                    $id = $data['id_produk'];
-                    $nama_file_baru = $data['gambar'];
+                    $id = $data['id'];
                     $input_nama_produk = $data['nama_donat'];
                     $input_kategori_produk = $data['nama_kategori'];
                     $input_harga_produk = $data['harga'];
                     $stok_produk = $data['status'];
+                    $nama_file_baru = $data['gambar'];
+
                 }
                 ?>
+              <div class="panel-body">
+                <form role="form" action="data_penjual_edit_db.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                   <div class="form-group">
-                    <label>Unggah Foto</label>
-                    <input type="file" name="foto_produk" value="<?php echo $nama_file_baru; ?>" placeholder="Foto Produk"> 
+                    <label>ID produk</label>
+                    <input type="text" name="id" class="form-control" value="<?php echo $id; ?>" id="exampleInputEmail1" placeholder="ID Produk">
                   </div>
                   <div class="form-group">
                     <label>Nama Produk</label>
-                    <input type="text" name="nama_donat" class="form-control" value="<?php echo $input_nama_produk; ?>" id="exampleInputEmail1" placeholder="Nama Produk">
+                    <input type="text" name="nama_donat" class="form-control" value="<?php echo $nama_donat; ?>" id="exampleInputEmail1" placeholder="Nama Produk">
                   </div>
                   <div class="form-group">
                     <label>Kategori</label>
-                    <select type="text" name="nama_kategori" class="form-control" value="<?php echo $input_kategori_produk; ?>" aria-label="label for the select">
+                    <select type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori; ?>" aria-label="label for the select">
                       <option value="Ukuran Donat">Donat Ukuran Regular</option>
                       <option value="Ukuran Donat">Donat Ukuran Mini</option>
                     </select>  
                   </div>
                   <div class="form-group">
                     <label>Harga</label>
-                    <select type="number" name="harga" class="form-control" value="<?php echo $input_harga_produk; ?>" aria-label="label for the select" placeholder="Harga">
+                    <select type="number" name="harga" class="form-control" value="<?php echo $harga; ?>" aria-label="label for the select" placeholder="Harga">
                       <option value="5000">5000</option>
                       <option value="6000">6000</option>
                       <option value="9500">9500</option>
@@ -177,7 +178,11 @@
                   </div>
                   <div class="form-group">
                     <label>Stok Donat</label>
-                    <input type="text" name="status" class="form-control" value="<?php echo $stok_produk; ?>" id="exampleInputPassword1" placeholder="Stok Donat">
+                    <input type="text" name="status" class="form-control" value="<?php echo $status; ?>" id="exampleInputPassword1" placeholder="Stok Donat">
+                  </div>
+                  <div class="form-group">
+                    <label>Unggah Foto</label>
+                    <input type="file" name="foto_produk" value="<?php echo $gambar; ?>" placeholder="Foto Produk"> 
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

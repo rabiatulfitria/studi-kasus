@@ -7,7 +7,7 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="../logo_donat.png">
+	<link rel="icon" href="img/logo_donat.png">
 
   <title>Admin | TokoDonat</title>
 
@@ -36,6 +36,10 @@
       Author: BootstrapMade
       Author URL: https://bootstrapmade.com
     ======================================================= -->
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>  
 </head>
 
 <body>
@@ -126,23 +130,22 @@
         <!-- page start-->
         
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-12">
             <section class="panel">
-              <header class="panel-heading">
-                
-              </header>
-              <a class="btn btn-primary" href="data_penjual_tambah.php">Tambah Data</a>
-              <table class="table table-striped table-advance table-hover">
-                <tbody>
+              <a class="btn btn-primary" style="margin-top: 10px; margin-left: 10px;" href="data_penjual_tambah.php">Tambah Data</a>
+              <table id="tabelJQuery" class="table table-striped table-advance table-hover">
+                <thead>
                   <tr>
-                    <th><i></i> ID</th>
-                    <th><i></i> Nama Produk</th>
-                    <th><i></i> Kategori</th>
-                    <th><i></i> Harga</th>
-                    <th><i></i> Stok Donat</th>
-                    <th><i></i> Gambar Produk</th>
-                    <th><i></i> Action</th>
+                    <th> ID</th>
+                    <th> Nama Produk</th>
+                    <th> Kategori</th>
+                    <th> Harga</th>
+                    <th> Stok Donat</th>
+                    <th> Gambar Produk</th>
+                    <th> Action</th>
                   </tr>
+                </thead>
+                <tbody>
                   <?php
                     require('../koneksi.php');
                     $sql  = "SELECT * FROM produk_donat";
@@ -157,11 +160,11 @@
                     <td><?php echo $data['nama_kategori']; ?></td>
                     <td>Rp <?php echo $data['harga']; ?></td>
                     <td><?php echo $data['status']; ?></td>
-                    <td><img width="150px" src="../images/<?php echo $data['gambar']; ?>"></td>
+                    <td><img width="90px" src="../images/<?php echo $data['gambar']; ?>"></td>
 
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-warning" href="data_penjual_edit.php?id=<?php echo $data['id']; ?>"><i class="icon_pencil_alt"></i>Edit</a>
+                        <a class="btn btn-warning" href="data_penjual_edit.php?id=<?php echo $data['id']; ?>"><i class="icon_pencil_alt"></i> Edit</a>
                         <a class="btn btn-danger" href="data_penjual_hapus_db.php?id=<?php echo $data['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><i class="icon_trash_alt"></i>Del</a>
                       </div>
                     </td>
@@ -198,7 +201,14 @@
   <!--custome script for all page-->
   <script src="js/scripts.js"></script>
 
-
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>  
+  <script>
+    $(document).ready(function () {
+        $('#tabelJQuery').DataTable();
+    });
+</script>
 </body>
 
 </html>

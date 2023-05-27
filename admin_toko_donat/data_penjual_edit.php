@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="icon" href="img/logo_donat.png">
 
   <title>TokoDonat | Kentang</title>
 
@@ -136,6 +137,7 @@
               <header class="panel-heading">
                 Edit Data Produk
               </header>
+        
               <?php 
                 require("../koneksi.php");
                 $id = $_GET['id'];
@@ -151,25 +153,27 @@
                 }
                 ?>
               <div class="panel-body">
-                <form role="form" action="data_penjual_edit_db.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+                <form action="data_penjual_edit_db.php?id=<?php echo $id; ?>" method="post" id="editDataProduk" novalidate="novalidate" enctype="multipart/form-data">
                   <div class="form-group">
                     <label>ID produk</label>
-                    <input type="text" name="id" class="form-control" value="<?php echo $id; ?>" id="exampleInputEmail1" placeholder="ID Produk">
+                    <input type="text" name="id" class="form-control" value="<?php echo $id; ?>" id="id" placeholder="ID Produk">
                   </div>
                   <div class="form-group">
                     <label>Nama Produk</label>
-                    <input type="text" name="nama_donat" class="form-control" value="<?php echo $nama_donat; ?>" id="exampleInputEmail1" placeholder="Nama Produk">
+                    <input type="text" name="nama_donat" class="form-control" value="<?php echo $nama_donat; ?>" id="namadonat" placeholder="Nama Produk">
                   </div>
                   <div class="form-group">
                     <label>Kategori</label>
-                    <select type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori; ?>" aria-label="label for the select">
-                      <option value="Ukuran Donat">Donat Ukuran Regular</option>
-                      <option value="Ukuran Donat">Donat Ukuran Mini</option>
+                    <select type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori; ?>" id="namakategori" aria-label="label for the select">
+                      <option value=""></option>
+                      <option value="Donat Ukuran Regular">Donat Ukuran Regular</option>
+                      <option value="Donat Ukuran Regular">Donat Ukuran Mini</option>
                     </select>  
                   </div>
                   <div class="form-group">
                     <label>Harga</label>
-                    <select type="number" name="harga" class="form-control" value="<?php echo $harga; ?>" aria-label="label for the select" placeholder="Harga">
+                    <select type="number" name="harga" class="form-control" value="<?php echo $harga; ?>" id="harga" aria-label="label for the select" placeholder="Harga">
+                      <option value=""></option>
                       <option value="5000">5000</option>
                       <option value="6000">6000</option>
                       <option value="9500">9500</option>
@@ -178,11 +182,11 @@
                   </div>
                   <div class="form-group">
                     <label>Stok Donat</label>
-                    <input type="text" name="status" class="form-control" value="<?php echo $status; ?>" id="exampleInputPassword1" placeholder="Stok Donat">
+                    <input type="text" name="status" class="form-control" value="<?php echo $status; ?>" id="status" placeholder="Stok Donat">
                   </div>
                   <div class="form-group">
-                    <label>Unggah Foto</label>
-                    <input type="file" name="foto_produk" value="<?php echo $gambar; ?>" placeholder="Foto Produk"> 
+                    <label for="exampleInputFile">Unggah Foto</label>
+                    <input type="file" name="gambar" value="<?php echo $gambar; ?>" id="exampleInputFile" placeholder="Foto Produk"> 
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -241,7 +245,64 @@
   <!-- custome script for all page -->
   <script src="js/scripts.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+ <style>
+   .error {
+   border-color: red !important;
+   color: red !important;
+   }
+ </style>
+<script>
+$(document).ready(function () {
+  $('#editDataProduk').validate({
+      rules: {
+          id: {
+            required: true,
+          },
+          nama_donat: {
+            required: true,
+          },
+          nama_kategori: {
+            required: true
+          },
+          harga: {
+            required: true
+          },
+          status: {
+            required: true
+          },
+          gambar: {
+            required: true
+          }
+      },
+      messages: {
+          nama_donat: {
+          required: "Harap isikan nama produk",
+          },
+          nama_kategori: {
+          required: "Harap isikan kategori produk",
+          },
+          harga: {
+          required: "Harap isikan harga produk",
+          },
+          status: {
+          required: "Harap isikan stok produk",
+          },
+          gambar: {
+          required: "Harap cantumkan gambar produk",
+          }
+      },
+      submitHandler: function () {
+        form.submit();
+      }  
+    });
+  });
+
+  function displayFileName(input) {
+    var label = document.querySelector('.custom-file-label');
+    label.textContent = input.files[0].name;
+  }
 
 </body>
-
 </html>

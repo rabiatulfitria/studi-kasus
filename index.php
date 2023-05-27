@@ -8,7 +8,7 @@
 	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="gettemplates.co" />
-
+	<link rel="icon" href="images/logo_donat.png">
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -61,7 +61,6 @@
 					<div id="fh5co-logo">
 						<img src="images/logo_donat.png" alt="logo" width="70" height="64" class="d-inline-block align-text-top">
 						<a href="index.php">Toko Donat</a>
-
 					</div>
 				</div>
 			</div>

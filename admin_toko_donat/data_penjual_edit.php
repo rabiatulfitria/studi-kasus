@@ -142,11 +142,11 @@
                 $query = mysqli_query($db_con,"SELECT * FROM produk_donat WHERE id='$id'");
                 while ($data = mysqli_fetch_array($query)) {
                     $id = $data['id'];
-                    $input_nama_produk = $data['nama_donat'];
-                    $input_kategori_produk = $data['nama_kategori'];
-                    $input_harga_produk = $data['harga'];
-                    $stok_produk = $data['status'];
-                    $nama_file_baru = $data['gambar'];
+                    $nama_donat = $data['nama_donat'];
+                    $nama_kategori = $data['nama_kategori'];
+                    $harga = $data['harga'];
+                    $status = $data['status'];
+                    $gambar = $data['gambar'];
 
                 }
                 ?>

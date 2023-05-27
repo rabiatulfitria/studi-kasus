@@ -15,11 +15,11 @@
 
 	$tambah_data 		= "INSERT INTO produk_donat 
 					      (nama_donat,nama_kategori,harga,status,gambar)
-					      VALUE ('$nama_donat','$nama_kategori','$harga','$status','gambar')";
-	echo "INSERT INTO produk_donat 
-	(nama_donat,nama_kategori,harga,status,gambar)
-	VALUE ('$nama_donat','$nama_kategori','$harga','$status','gambar')";
-	exit();
-	// $query  	 		= mysqli_query($db_con, $tambah_data);
+					      VALUE ('$nama_donat','$nama_kategori','$harga','$status','$gambar')";
+	// echo "INSERT INTO produk_donat 
+	// (nama_donat,nama_kategori,harga,status,gambar)
+	// VALUE ('$nama_donat','$nama_kategori','$harga','$status','gambar')";
+	// exit();
+	$query  	 		= mysqli_query($db_con, $tambah_data);
 	// echo "<meta http-equiv='refresh' content='0;url=data_penjual.php'>";
 ?>

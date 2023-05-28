@@ -186,7 +186,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Unggah Foto</label>
-                    <input type="file" name="gambar" value="<?php echo $gambar; ?>" id="exampleInputFile" placeholder="Foto Produk"> 
+                    <input type="file" name="gambar" value="<?php echo $gambar; ?>" id="exampleInputFile" placeholder="Foto Produk" onchange="displayFileName(this)"> 
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -247,13 +247,14 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
- <style>
-   .error {
-   border-color: red !important;
-   color: red !important;
+  <style>
+    .error {
+    border-color: red !important;
+    color: red !important;
    }
- </style>
+  </style>
 <script>
+
 $(document).ready(function () {
   $('#editDataProduk').validate({
       rules: {

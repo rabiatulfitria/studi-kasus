@@ -50,7 +50,7 @@
 
 	</head>
 	<body>
-	<nav class="fh5co-nav" role="navigation">
+	<nav class="fh5co-nav" role="navigation" id="h">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-xs-2">
@@ -62,13 +62,13 @@
 				<div class="col-md-3 col-xs-2" style="padding-top: 20px; padding-bottom: 20px; margin-left: 200px;">
 				    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" style="font-size: 18px;" href="index.html">Home </a>
+                            <a class="nav-link" style="font-size: 18px;" href="#h">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="font-size: 18px;" href="menu.html">Menu</a>
+                            <a class="nav-link" style="font-size: 18px;" href="#fh5co-product">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="font-size: 18px;" href="about.html">About</a>
+                            <a class="nav-link" style="font-size: 18px;" href="#about">About</a>
                         </li>
                     </ul>
 				</div>
@@ -178,7 +178,7 @@
 			</div>
 		</div>
 	</div>
-		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" id="about">
 					<h2>About</h2>
 				</div>
 			</div>

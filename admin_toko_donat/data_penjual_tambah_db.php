@@ -21,5 +21,5 @@
 	// VALUE ('$nama_donat','$nama_kategori','$harga','$status','gambar')";
 	// exit();
 	$query  	 		= mysqli_query($db_con, $tambah_data);
-	// echo "<meta http-equiv='refresh' content='0;url=data_penjual.php'>";
+	echo "<meta http-equiv='refresh' content='0;url=data_penjual.php'>";
 ?>

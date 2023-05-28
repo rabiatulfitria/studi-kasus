@@ -165,7 +165,6 @@
                   <div class="form-group">
                     <label>Kategori</label>
                     <select type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori; ?>" id="namakategori" aria-label="label for the select">
-                      <option value=""></option>
                       <option value="Donat Ukuran Regular">Donat Ukuran Regular</option>
                       <option value="Donat Ukuran Regular">Donat Ukuran Mini</option>
                     </select>  
@@ -173,7 +172,6 @@
                   <div class="form-group">
                     <label>Harga</label>
                     <select type="number" name="harga" class="form-control" value="<?php echo $harga; ?>" id="harga" aria-label="label for the select" placeholder="Harga">
-                      <option value=""></option>
                       <option value="5000">5000</option>
                       <option value="6000">6000</option>
                       <option value="9500">9500</option>

@@ -129,7 +129,9 @@
 						</div>
 						<div class="desc">
 							<h3><a href="index.php"><?php echo $data['nama_donat']; ?></a></h3>
-							<span class="price">Rp<?php echo $data['harga']; ?></span>
+							<span class="price">Rp<?php echo $data['harga']; ?></span><br>
+							<span><?php echo $data['nama_kategori']; ?></span><br>
+							<span><?php echo $data['status']; ?></span>
 						</div>
 					</div>
 				</div>

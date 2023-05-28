@@ -66,7 +66,7 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" src="img/gambar1.png" style="width: 40px; height: 40px;">
                             </span>
                             <span class="username">admin</span>
                             <b class="caret"></b>

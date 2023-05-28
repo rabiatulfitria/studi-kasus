@@ -50,10 +50,6 @@
 
 	</head>
 	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
@@ -62,6 +58,19 @@
 						<img src="images/logo_donat.png" alt="logo" width="70" height="64" class="d-inline-block align-text-top">
 						<a href="index.php">Toko Donat</a>
 					</div>
+				</div>
+				<div class="col-md-3 col-xs-2" style="padding-top: 20px; padding-bottom: 20px; margin-left: 200px;">
+				    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: 18px;" href="index.html">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: 18px;" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: 18px;" href="about.html">About</a>
+                        </li>
+                    </ul>
 				</div>
 			</div>
 		</div>
@@ -144,7 +153,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/sandy.jpeg" alt="user">
+										<img src="images/gambar3.png" alt="user" style="width: 100px; height:100px">
 									</figure>
 									<span>Fatimatuz Zahro</span>
 									<blockquote>
@@ -155,7 +164,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/Deo.jpeg" alt="user">
+										<img src="images/gambar4.png" alt="user" style="width: 100px; height:100px">
 									</figure>
 									<span>Deoo Andica</span>
 									<blockquote>
@@ -174,9 +183,25 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12 col-sm-4 animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-staff">
-						<img src="images/robiatul.jpg" width="350px" height="200px">
+				<div class="col-md-6 col-sm-4 animate-box" data-animate-effect="fadeIn">
+                    <div class="fh5co-staff" style="margin-left: 10%">
+                        <div class="heading_container">
+                            <h2>
+                                Toko Donat Kentang
+                            </h2>
+                        </div>
+						<img src="images/colorfultastydonuts.jpg">
+						<p>
+                            There are many variations of passages of Lorem Ipsum available,
+							but the majority have suffered alteration
+                            in some form, by injected humour,
+							or randomised words which don't look even slightly believable.
+                        </p>
+					</div>
+				</div>		
+				<div class="col-md-6 col-sm-4 animate-box" data-animate-effect="fadeIn" style="display: flex;">
+					<div class="fh5co-staff"  style="margin-left: 30%">
+						<img src="images/robiatul.jpg">
 						<h3>Rabiatul Fitria SP</h3>
 						<strong class="role">Owner Toko Donat</strong>
 					</div>
